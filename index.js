@@ -11,8 +11,11 @@ app.get('/', function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
+app.post('/api/fileanalyse', function (req, res) {
 
-
+  console.log('app.post firing');
+  return res.send({obj: "obj"});
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, function () {
